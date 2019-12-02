@@ -11,25 +11,6 @@ var canJump = true;
 var upCount = 0;
 var score = 0;
 
-function setup() {
-  createCanvas(800, 400);
-}
-
-function draw() {
-    background(139, 229, 247);
-        var green = 160;
-        var blue = 255;
-        strokeWeight(1);
-        for (var i = 0; i < height; i++) {
-            stroke(50,green,blue,150);
-            line(0,i,width,i);
-            blue -= (255/height);
-            green -= (160/height);
-        }
-}
-
-/*
-
 var drawLeaf = function(x,y,angle,leafColor) {
     pushMatrix();
     translate(x,y);
@@ -131,6 +112,34 @@ Celery.prototype.display = function() {
     this.x -= this.xspeed;
     this.y = constrain(this.y,0,height-90);
 };
+
+var bigCel = new Celery(122,210,1.2);
+
+function setup() {
+  createCanvas(800, 800);
+}
+
+function draw() {
+  if (currentScene === 0) {
+    background(139, 229, 247);
+    var green = 160;
+    var blue = 255;
+    strokeWeight(1);
+    for (var i = 0; i < height; i++) {
+        stroke(50,green,blue,150);
+        line(0,i,width,i);
+        blue -= (255/height);
+        green -= (160/height);
+    }       
+    pushMatrix();
+    scale(width/400,height/400);
+    bigCel.display(); //celery
+  }
+}
+
+/*
+
+
 Celery.prototype.jump = function(direction) {
     if (direction === "u") {
         this.speed = jumpSpeed;
@@ -498,6 +507,7 @@ var enemyTest = new Enemy(200,200);
 //make celeries
 var cel = new Celery(100,200,0.3);
 var bigCel = new Celery(122,210,1.2);
+
 //make mountains
 var mountain1 = new Mountain(300,200,200);
 var mountain2 = new Mountain(400,200,150);
@@ -560,11 +570,7 @@ var drop3 = new WaterDrop(-16,21);
 //score droplet
 var scoreDrop = new WaterDrop(width - 20, 22);
 function draw() {
-    if (currentScene === 0) {
-       
-        pushMatrix();
-        scale(width/400,height/400);
-        bigCel.display(); //celery
+   
         //water drops
         pushMatrix();
         translate(230,100);
