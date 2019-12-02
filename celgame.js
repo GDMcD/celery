@@ -122,7 +122,7 @@ function setup() {
 }
 
 function draw() {
-  //if (currentScene === 0) {
+  if (currentScene === 0) {
     background(139, 229, 247);
     var green = 160;
     var blue = 255;
@@ -135,8 +135,8 @@ function draw() {
     }       
     /*pushMatrix();
     scale(width/400,height/400);
-    bigCel.display(); //celery
-  }*/
+    bigCel.display(); //celery*/
+  }
 }
 
 /*
