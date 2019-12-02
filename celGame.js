@@ -544,7 +544,7 @@ var drop2 = new WaterDrop(9,31);
 var drop3 = new WaterDrop(-16,21);
 //score droplet
 var scoreDrop = new WaterDrop(width - 20, 22);
-draw = function() {
+function draw() {
     if (currentScene === 0) {
         background(139, 229, 247);
         var green = 160;
