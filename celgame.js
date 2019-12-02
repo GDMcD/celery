@@ -115,7 +115,7 @@ class Celery {
     }
 }
 
-var bigCel = new Celery(122,210,1.2);
+let bigCel = new Celery(122,210,1.2);
 
 function setup() {
   createCanvas(800, 800);
