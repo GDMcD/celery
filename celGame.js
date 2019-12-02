@@ -1,8 +1,9 @@
 function setup() {
   createCanvas(800, 400);
 }
-
-rectMode(CENTER);
+fill(255,255,255);
+ellipse(100,100,100,100);
+/*rectMode(CENTER);
 textAlign(CENTER,CENTER);
 angleMode = "radians";
 var jumpSpeed = 5;
@@ -15,6 +16,7 @@ var pressedKeys = [];
 var canJump = true;
 var upCount = 0;
 var score = 0;
+
 var drawLeaf = function(x,y,angle,leafColor) {
     pushMatrix();
     translate(x,y);
@@ -473,11 +475,11 @@ Enemy.prototype.display = function() {
 };
 Enemy.prototype.disappear = function() {
     //pseudo code
-    /*
-    this.x = removed from screen
-    wait time? random(5,10) seconds?
-    this.x = back and ready to attack!
-    */
+    //
+    //this.x = removed from screen
+    //wait time? random(5,10) seconds?
+    //this.x = back and ready to attack!
+
 };
 var enemyTest = new Enemy(200,200);
 //make celeries
@@ -687,3 +689,4 @@ function draw() {
         scoreDrop.display();
     }
 };
+*/
