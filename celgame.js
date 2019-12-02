@@ -7,13 +7,13 @@ var hamScore = 0;
 var larScore = 0;
 function setup() {
   createCanvas(800, 400);
-  hamup = loadImage('ham-up.png'); // Load the image
-  hammid = loadImage('ham-mid.png'); // Load the image
-  hamdown = loadImage('ham-down.png'); // Load the image
-  larup = loadImage('lar-up.png'); // Load the image
-  larmid = loadImage('lar-mid.png'); // Load the image
-  lardown = loadImage('lar-down.png'); // Load the image
-  back = loadImage('back.jpg'); // Load the image
+  hamup = loadImage('images/coconut.png'); // Load the image
+  hammid = loadImage('images/coconut.png'); // Load the image
+  hamdown = loadImage('images/coconut.png'); // Load the image
+  larup = loadImage('images/coconut.png'); // Load the image
+  larmid = loadImage('images/coconut.png'); // Load the image
+  lardown = loadImage('images/coconut.png'); // Load the image
+  back = loadImage('background.jpg'); // Load the image
 }
 
 function draw() {
