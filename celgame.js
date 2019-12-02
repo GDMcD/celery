@@ -16,9 +16,16 @@ function setup() {
 }
 
 function draw() {
-  background(255);
-  fill(0);
-  ellipse(mouseX,100,100,100);
+    background(139, 229, 247);
+        var green = 160;
+        var blue = 255;
+        strokeWeight(1);
+        for (var i = 0; i < height; i++) {
+            stroke(50,green,blue,150);
+            line(0,i,width,i);
+            blue -= (255/height);
+            green -= (160/height);
+        }
 }
 
 /*
@@ -554,16 +561,7 @@ var drop3 = new WaterDrop(-16,21);
 var scoreDrop = new WaterDrop(width - 20, 22);
 function draw() {
     if (currentScene === 0) {
-        background(139, 229, 247);
-        var green = 160;
-        var blue = 255;
-        strokeWeight(1);
-        for (var i = 0; i < height; i++) {
-            stroke(50,green,blue,150);
-            line(0,i,width,i);
-            blue -= (255/height);
-            green -= (160/height);
-        }
+       
         pushMatrix();
         scale(width/400,height/400);
         bigCel.display(); //celery
