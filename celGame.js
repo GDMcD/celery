@@ -1,8 +1,12 @@
 function setup() {
   createCanvas(800, 400);
 }
-fill(255,255,255);
-ellipse(100,100,100,100);
+
+function draw() {
+  fill(0);
+  ellipse(100,100,100,100);
+}
+
 /*rectMode(CENTER);
 textAlign(CENTER,CENTER);
 angleMode = "radians";
