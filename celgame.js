@@ -1,15 +1,4 @@
-
-function setup() {
-  createCanvas(800, 400);
-}
-
-function draw() {
-  background(255);
-  fill(0);
-  ellipse(100,100,100,100);
-}
-
-/*rectMode(CENTER);
+rectMode(CENTER);
 textAlign(CENTER,CENTER);
 var jumpSpeed = 5;
 var fallingConstant = 0.25;
@@ -21,6 +10,18 @@ var pressedKeys = [];
 var canJump = true;
 var upCount = 0;
 var score = 0;
+
+function setup() {
+  createCanvas(800, 400);
+}
+
+function draw() {
+  background(255);
+  fill(0);
+  ellipse(mouseX,100,100,100);
+}
+
+/*
 
 var drawLeaf = function(x,y,angle,leafColor) {
     pushMatrix();
