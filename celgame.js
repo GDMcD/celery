@@ -11,7 +11,7 @@ var canJump = true;
 var upCount = 0;
 var score = 0;
 
-function drawLeaf(x,y,angle,leafColor) {
+/*function drawLeaf(x,y,angle,leafColor) {
     pushMatrix();
     translate(x,y);
     rotate(angle);
@@ -115,7 +115,7 @@ class Celery {
     }
 }
 
-let bigCel = new Celery(122,210,1.2);
+let bigCel = new Celery(122,210,1.2);*/
 
 function setup() {
   createCanvas(800, 800);
