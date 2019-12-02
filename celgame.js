@@ -11,7 +11,7 @@ var canJump = true;
 var upCount = 0;
 var score = 0;
 
-var drawLeaf = function(x,y,angle,leafColor) {
+function drawLeaf(x,y,angle,leafColor) {
     pushMatrix();
     translate(x,y);
     rotate(angle);
@@ -34,84 +34,86 @@ var drawLeaf = function(x,y,angle,leafColor) {
     triangle(-1,32,1,32,0,-20);
     popMatrix();
 };
-var Celery = function(x,y,scale) {
-    this.x = x;
-    this.y = y;
-    this.speed = 0;
-    this.xspeed = 0;
-    this.scale = scale;
-};
-Celery.prototype.display = function() {
-    pushMatrix();
-    translate(this.x,this.y);
-    rotate(-7*PI/180);
-    scale(this.scale);
-    
-    //left leg
-    noFill();
-    stroke(0);
-    strokeWeight(10);
-    curve(1,90,25,90,62,158,71,237);
-    line(62,158,79,149);
-    //left arm
-    curve(24,-181,29,0,86,8,124,-220);
-    fill(0);
-    ellipse(84,8,2,3);
-    
-    //body
-    noStroke();
-    fill(218, 227, 146);
-    rect(0,0,75,200,50);
-    fill(181, 205, 85);
-    rect(0,0,30,195,15);
-    fill(209,220,126);
-    rect(0,0,26,190,13);
-    
-    //right arm
-    stroke(0);
-    strokeWeight(10);
-    noFill();
-    curve(0,47,-25,0,-60,50,67,172);
-    fill(0);
-    ellipse(-58,50,3,2);
-    //right leg
-    noFill();
-    curve(-33,-110,-25,90,-84,124,-184,-35);
-    line(-84,124,-96,137);
-    
-    //face
-    ellipse(0,-25,5,5);
-    ellipse(24,-25,4,5);
-    strokeWeight(5);
-    fill(110,141,72);
-    ellipse(12,-2,12,10);
-    
-    //leaves
-    noStroke();
-    drawLeaf(-38,-108,-7*PI/45,color(113,145,72));
-    drawLeaf(-23,-122,-17*PI/180,color(113,145,72));
-    drawLeaf(12,-125,PI/30,color(113,145,100));
-    drawLeaf(45,-110,PI/6,color(113,157,74));
-    drawLeaf(0,-114,PI/45,color(125,157,74));
-    drawLeaf(-21,-107,-9*PI/180,color(144,174,78));
-    drawLeaf(30,-112,9*PI/180,color(144,174,78));
-    
-    //headband
-    fill(209,86,44);
-    rect(0,-50,80,30,5);
-    fill(248,248,222);
-    rect(0,-50,80,10);
-    fill(104,150,210);
-    rect(0,-40,80,10,5);
-    rect(0,-42.5,80,5);
-    
-    popMatrix();
-    
-    this.y -= this.speed;
-    this.x = constrain(this.x,50,width-50);
-    this.x -= this.xspeed;
-    this.y = constrain(this.y,0,height-90);
-};
+class Celery {
+    constructor(x,y,scale) {
+        this.x = x;
+        this.y = y;
+        this.speed = 0;
+        this.xspeed = 0;
+        this.scale = scale;
+    }
+    display() {
+        pushMatrix();
+        translate(this.x,this.y);
+        rotate(-7*PI/180);
+        scale(this.scale);
+
+        //left leg
+        noFill();
+        stroke(0);
+        strokeWeight(10);
+        curve(1,90,25,90,62,158,71,237);
+        line(62,158,79,149);
+        //left arm
+        curve(24,-181,29,0,86,8,124,-220);
+        fill(0);
+        ellipse(84,8,2,3);
+
+        //body
+        noStroke();
+        fill(218, 227, 146);
+        rect(0,0,75,200,50);
+        fill(181, 205, 85);
+        rect(0,0,30,195,15);
+        fill(209,220,126);
+        rect(0,0,26,190,13);
+
+        //right arm
+        stroke(0);
+        strokeWeight(10);
+        noFill();
+        curve(0,47,-25,0,-60,50,67,172);
+        fill(0);
+        ellipse(-58,50,3,2);
+        //right leg
+        noFill();
+        curve(-33,-110,-25,90,-84,124,-184,-35);
+        line(-84,124,-96,137);
+
+        //face
+        ellipse(0,-25,5,5);
+        ellipse(24,-25,4,5);
+        strokeWeight(5);
+        fill(110,141,72);
+        ellipse(12,-2,12,10);
+
+        //leaves
+        noStroke();
+        drawLeaf(-38,-108,-7*PI/45,color(113,145,72));
+        drawLeaf(-23,-122,-17*PI/180,color(113,145,72));
+        drawLeaf(12,-125,PI/30,color(113,145,100));
+        drawLeaf(45,-110,PI/6,color(113,157,74));
+        drawLeaf(0,-114,PI/45,color(125,157,74));
+        drawLeaf(-21,-107,-9*PI/180,color(144,174,78));
+        drawLeaf(30,-112,9*PI/180,color(144,174,78));
+
+        //headband
+        fill(209,86,44);
+        rect(0,-50,80,30,5);
+        fill(248,248,222);
+        rect(0,-50,80,10);
+        fill(104,150,210);
+        rect(0,-40,80,10,5);
+        rect(0,-42.5,80,5);
+
+        popMatrix();
+
+        this.y -= this.speed;
+        this.x = constrain(this.x,50,width-50);
+        this.x -= this.xspeed;
+        this.y = constrain(this.y,0,height-90);
+    }
+}
 
 var bigCel = new Celery(122,210,1.2);
 
