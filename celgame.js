@@ -130,7 +130,7 @@ class Celery {
       } else if (direction === "r") {
         this.xspeed = -jumpSpeed + 1;
       } else if (direction === "l") {
-        this.xspeed = jumpSpeed - 1;
+        this.xspeed = jumpSpeed - 4;
       }
     }
     fall() {
