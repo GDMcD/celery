@@ -413,14 +413,14 @@ class Platform {
       rect(this.x, this.y, this.w, 15, 7.5);
     }
     scroll() {
-      this.x -= 1;
+      this.x -= 3;
     }
   }
 class WaterDrop {
     constructor(x, y) {
       this.x = x;
       this.y = y;
-      this.speed = random(0.75, 1);
+      this.speed = random(2.75, 3);
     }
     display() {
       push();
