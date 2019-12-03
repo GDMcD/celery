@@ -119,18 +119,18 @@ class Celery {
       rect(0, -40, 80, 10, 5);
       rect(0, -42.5, 80, 5);
       pop();
-      this.y -= this.speed;
+      this.y += this.speed;
       this.x = constrain(this.x, 50, cwidth - 50);
-      this.x -= this.xspeed;
+      this.x += this.xspeed;
       this.y = constrain(this.y, 0, cheight - 90);
     }
     jump(direction) {
       if (direction === "u") {
         this.speed = jumpSpeed;
       } else if (direction === "r") {
-        this.xspeed = -jumpSpeed + 1;
+        this.xspeed = jumpSpeed + 1;
       } else if (direction === "l") {
-        this.xspeed = -jumpSpeed - 1;
+        this.xspeed = -jumpSpeed - 4;
       }
     }
     fall() {
