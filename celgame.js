@@ -1,5 +1,5 @@
 var cwidth = 780;
-var cheight = 780;
+var cheight = 740;
 
 var jumpSpeed = 5;
 var fallingConstant = 0.25;
