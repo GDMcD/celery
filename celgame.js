@@ -497,7 +497,7 @@ let scoreDrop;
 let enemyTest;
 
 function setup() {
-  createCanvas(780, 780);
+  createCanvas(cwidth, cheight);
   rectMode(CENTER);
   textAlign(CENTER, CENTER);
 
