@@ -710,7 +710,7 @@ function draw() {
         //score display
         fill(0,179,255);
         textSize(25);
-        text("SCORE: " + score + "/85", width - 120, 20);
+        text(score + "/85", width - 80, 20);
         scoreDrop.display();
     }
 }
